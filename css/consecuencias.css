@@ -1,0 +1,281 @@
+.parallax-container {
+    background-image: url('../imagenes/drogas-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+    margin-top: -91px;
+    padding-top: 91px;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 0;
+    margin-top: -91px; /* Compensa el padding-top del body para eliminar el espacio */
+    padding-top: 91px; /* Añade padding igual a la altura del header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.parallax-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.hero-section .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-section h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.hero-section .divider {
+    background: white;
+    height: 4px;
+    width: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Contenedor principal para el efecto parallax */
+.parallax-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenido que se desplaza sobre la imagen fija */
+.content-section {
+    position: relative;
+    z-index: 2;
+    background-color: transparent; /* Cambiado de white a transparent */
+    padding-top: 3rem;
+    margin-top: -30px; /* Crea un efecto de superposición */
+}
+
+/* Animación para el contenido del hero */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para la sección de causas y efectos */
+.causas, .efectos {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white; /* Asegura que las tarjetas tengan fondo blanco */
+}
+
+.causas:hover, .efectos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Estilos para los íconos en las listas */
+.icon-bullet {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Estilos para los elementos de la lista */
+.list-group-item {
+    border: none;
+    padding: 0.75rem 1rem;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    transform: translateX(5px);
+}
+
+.text-center {
+    position: relative;
+    color: white;
+}
+
+.h3 {
+    font-weight: bold;
+}
+
+.image-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-carousel-container {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 0;
+    gap: 0;
+    width: 100%;
+}
+
+.image-slide {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.slide-image-container {
+    height: 413px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0;
+    margin: 0;
+}
+
+.slide-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Mejora los botones de navegación */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.prev-arrow {
+    left: 10px;
+}
+
+.next-arrow {
+    right: 10px;
+}
+
+.carousel-arrow:hover {
+    background-color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.mb-5 {
+    position: relative;
+}
+
+.gifs-section {
+    padding: 40px 0;
+}
+
+.gif-container {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gif-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gif-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gif-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.gif-card:hover .gif-container img {
+    transform: scale(1.05);
+}
+
+.gif-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.gif-card .card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.gif-card .card-text {
+    color: #666;
+}
+
+.gifs-container {
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+    .hero-section h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+    
+    .icon-bullet {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .list-group-item {
+        padding: 0.5rem 0.75rem;
+    }
+}

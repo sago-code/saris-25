@@ -1,0 +1,61 @@
+.video-section {
+    background-color: rgba(0, 0, 0, 0.03);
+    position: relative;
+    padding: 60px 0;
+}
+
+.video-section .divider {
+    background: #007bff;
+    height: 4px;
+    width: 80px;
+    margin: 0 auto 2rem;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.video-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.video-card .card-body {
+    padding: 1.5rem;
+    min-height: 80px;
+}
+
+.video-card .card-text {
+    font-weight: 500;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        padding: 40px 0;
+    }
+    
+    .video-card .card-body {
+        min-height: 60px;
+    }
+}

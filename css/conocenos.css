@@ -1,0 +1,204 @@
+/* Estilos para la página Conócenos */
+.conocenos-container {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.conocenos-header {
+    background: linear-gradient(135deg, #0056b3, #00a2e8);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.conocenos-header::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 1;
+}
+
+.conocenos-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.conocenos-content {
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.inspiracion-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 5px solid #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.inspiracion-title {
+    color: #0056b3;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.inspiracion-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #0056b3, #00a2e8);
+    border-radius: 3px;
+}
+
+.inspiracion-box p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.mensaje-box {
+    display: flex;
+    align-items: center;
+    background-color: #e7f5ff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mensaje-icon {
+    font-size: 2.5rem;
+    color: #0056b3;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.mensaje-text p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #0056b3;
+}
+
+.vision-text {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #444;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .conocenos-title {
+        font-size: 1.6rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+    }
+    
+    .inspiracion-title {
+        font-size: 1.3rem;
+    }
+    
+    .mensaje-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mensaje-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .vision-text {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .conocenos-content {
+        padding: 20px 15px;
+    }
+    
+    .inspiracion-box {
+        padding: 20px 15px;
+    }
+    
+    .conocenos-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Animaciones */
+.conocenos-container {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.inspiracion-box {
+    animation: slideInUp 0.6s ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
+.mensaje-box {
+    animation: slideInUp 0.6s ease-in-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
