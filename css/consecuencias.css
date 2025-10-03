@@ -1,5 +1,5 @@
 .parallax-container {
-    background-image: url('../imagenes/drogas-background.jpg');
+    background-image: url('/Imagenes/drogas-background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
